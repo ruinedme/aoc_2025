@@ -1,5 +1,8 @@
 .PHONY: clean
 
+CC = gcc
+CFLAGS = -Wall -Wextra -Iinclude
+
 all: setup clean build
 
 clean:
@@ -9,4 +12,4 @@ setup:
 	mkdir -p inputs && mkdir -p bin
 
 build:
-	gcc -std=c99 -O3 -o bin/main ./src/*
+	$(CC) $(CFLAGS) -std=c99 -O3 -o bin/main ./src/*

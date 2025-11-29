@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "input.h"
+#include "grid.h"
 
 int main(int argc, char **argv){
     if (argc < 2){
@@ -13,7 +14,8 @@ int main(int argc, char **argv){
 
     if(input.buffer){
         printf("Read in file\n");
-        printf("%d\n", input.lines);
+        Grid grid = initGrid(&input);
+        printf("height: %d, width: %d", grid.height, grid.width);
     }
 
     // Clean up
