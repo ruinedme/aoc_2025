@@ -71,7 +71,7 @@ const day1_2 = (input) => {
                     dial = 100 + dial;
                     if (dial !== 0 && previous !== 0) total++;
                 }
-                console.log(instruction, 'dial', dial, 'total', total);
+                // console.log(instruction, 'dial', dial, 'total', total);
                 break;
             }
             case 'R': {
@@ -80,7 +80,7 @@ const day1_2 = (input) => {
                     dial = Math.abs(100 - dial);
                     if (dial !== 0 && previous !==0) total++;
                 }
-                console.log(instruction, 'dial', dial, 'total', total);
+                // console.log(instruction, 'dial', dial, 'total', total);
                 break;
             }
             default: {
