@@ -4,8 +4,9 @@
 
 typedef struct
 {
-    int width;
+    int width; 
     int height;
+    int length; // Length of grid buffer excluding line endings
     char *buffer;
 } Grid;
 

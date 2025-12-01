@@ -1,0 +1,15 @@
+{
+  "name": "aoc_2025",
+  "version": "1.0.0",
+  "description": "Advent of Code 2025",
+  "main": "index.js",
+  "scripts": {
+    "day": "node ./src/index.js",
+    "newDay": "node ./src/template.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.10.1"
+  }
+}

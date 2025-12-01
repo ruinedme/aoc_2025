@@ -57,3 +57,4 @@ dkms.conf
 # project files
 inputs/
 .vscode/
+node_modules/
