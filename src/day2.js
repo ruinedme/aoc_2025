@@ -82,7 +82,31 @@ const day2_1 = (input) => {
  */
 const day2_2 = (input) => {
     let total = 0;
+    const ranges = parseInput(input);
+    const invalidIds = [];
+    for (let range of ranges) {
+        // console.log(range);
+        // let tmpBadIds = [];
+        const { start, end } = range;
+        for (let i = start; i <= end; i++) {
+            const s = i.toString(10);
+            const MAX_WINDOW = Math.floor(s.length / 2);
 
+            for (let currentWindow = 1; currentWindow <= MAX_WINDOW; currentWindow++) {
+                const toMatch = s.substring(0, currentWindow);
+                const pattern = RegExp(`^(${toMatch}){2,}$`);
+                if (pattern.test(s) ) {
+                    invalidIds.push(i);
+                    // tmpBadIds.push(BigInt(i));
+                    break;
+                }
+                if (s.length % 2 === 1) currentWindow++;
+            }
+        }
+        // console.log(tmpBadIds);
+    }
+
+    total = invalidIds.reduce((acc, cur) => acc + cur, 0);
     console.log(`Answer: ${total}`);
 };
 
