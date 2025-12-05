@@ -58,3 +58,4 @@ dkms.conf
 inputs/
 .vscode/
 node_modules/
+output.txt
