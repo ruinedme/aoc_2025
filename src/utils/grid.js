@@ -55,7 +55,18 @@ class Grid {
         }
 
         // edge case for 1 row grid
-        const row = this.height > 1 ? Math.floor(index / this.height) : 0;
+        let row = this.height > 1 ? Math.floor(index / this.height) : 0;
+        // Weird edge case where non-square grid doesn't calculate row correctly
+        // example 16 row X 15 column
+        // grid.getRowCol(224) = {14, 14} // correct
+        // grid.getRowCol(239) = {14, 14} // incorrect, row should be 15
+        // grid.getRowCol(222)); = {13, 12} // incourrect, row should be 14
+        // grid.getIndex(14,12)) = 222;
+        // if (this.height > this.width) row++;
+        // if (index === this.grid.length - 1) {
+        //     row = this.height - 1;
+        // }
+
         const col = index % this.width;
         return { row, col };
     }
