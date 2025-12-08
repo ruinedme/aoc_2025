@@ -23,12 +23,12 @@ const day8_1 = (input) => {
     console.log('starting');
     const junctions = parseInput(input);
     console.log('parsed');
-    junctions.sort((a, b) => {
-        if (a.x !== b.x) return a.x - b.x;
-        if (a.y !== b.y) return a.y - b.y;
-        return a.z - b.z;
-    });
-    console.log('sorted junctions');
+    // junctions.sort((a, b) => {
+    //     if (a.x !== b.x) return a.x - b.x;
+    //     if (a.y !== b.y) return a.y - b.y;
+    //     return a.z - b.z;
+    // });
+    // console.log('sorted junctions');
 
     const distances = [];
     console.log('checking distance between pairs');
