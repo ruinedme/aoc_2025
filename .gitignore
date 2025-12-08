@@ -59,3 +59,4 @@ inputs/
 .vscode/
 node_modules/
 output.txt
+output*.txt
