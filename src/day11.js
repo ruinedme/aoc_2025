@@ -104,7 +104,8 @@ const day11_2 = (input) => {
     let total = 0;
     const devices = parseInput(input);
     console.log('getting server paths');
-    // works in theory for sample input, i suspect i get an infinite loop.
+    // works for sample input.
+    // i suspect i get an infinite loop for my input
     // let it run for a while and got 22M+ paths which just doesn't seem correct
     total = getPaths(devices, 'fft', ['dac']);
     // also check dac => fft and add that to total
