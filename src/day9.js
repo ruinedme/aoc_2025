@@ -50,6 +50,24 @@ const day9_1 = (input) => {
  */
 const day9_2 = (input) => {
     let total = 0;
+    const points = parseInput(input);
+    const rectangles = [];
+
+    // Get all the rectangles, and their areas
+    for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
+            const a = area(points[i], points[j]);
+            rectangles.push({ a: i, b: j, area: a });
+        }
+    }
+
+    // The points are the corners of some larger polygon
+    // How do you tell if some rectangle completly overlaps the larger polygon
+    // If the polygon was a square or rectangle you could just see if the x,y
+    // of all 4 corners are <= to the corners of the polygon
+
+    // Since the rectangle MUST reside completely in the polygon
+    // We can check if the rectangle forms a valid line along one of the lines of the polygon
 
     console.log(`Answer: ${total}`);
 };
